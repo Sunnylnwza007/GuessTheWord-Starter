@@ -79,7 +79,9 @@
             app:layout_constraintBottom_toTopOf="@+id/score_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:text="0:00" />
+            tools:text="0:00"
+            android:text="@{gameViewModel.currentTimeString}"
+            />
 
         <TextView
             android:id="@+id/score_text"
@@ -95,7 +97,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             tools:text="Score: 2"
-            android:text="@{@string/score_format(gameViewModel.score)}"/>
+            android:text="@{@string/score_format(gameViewModel.score)}"
+            />
 
         <Button
             android:id="@+id/skip_button"
